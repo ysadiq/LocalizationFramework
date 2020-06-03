@@ -3,14 +3,13 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "A short description of LocalizationFramework."
   spec.description  = <<-DESC
-                    NetStatus is a small and lightweight Swift framework that allows to monitor and being notified for network status changes in a super-easy way!
+                    LocalizationFramework is a small educational framework!
                    DESC
   spec.homepage     = "http://EXAMPLE/LocalizationFramework"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "YOUR_NAME" => "YOUR_EMAIL" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :http => 'file:' + __dir__ + "/" }
-  # spec.source       = { :git => "https://github.com/YOUR_ACCOUNT/YOUR_REPO.git", :tag => "#{spec.version}" }
   spec.source_files = "LocalizationFramework/**/*.{swift,lproj,strings}"
   spec.swift_version = "5.1"
 end
