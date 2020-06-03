@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LocalizationFramework
+
+  Created by Yahya Saddiq on 6/3/20.
+  Copyright © 2020 Yahya Saddiq. All rights reserved.
+*/
+
+"title" = "Login NOW";
+"description" = "email address";
+"details" = "password";
