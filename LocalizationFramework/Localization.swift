@@ -8,9 +8,15 @@
 
 extension String {
     func localized(withComment comment: String = "") -> String {
-        return Bundle.localizationFramework.localizedString(forKey: self,
-                                                            value: "**\(self)**",
-                                                            table: nil)
+        let currentLanguage = String(Locale.current.identifier.prefix(2))
+        guard let bundlePath = Bundle.localizationFramework.path(forResource: currentLanguage,
+                                                                 ofType: "lproj") else {
+                                                                    return ""
+        }
+        let languageBundle = Bundle(path: bundlePath)
+        return languageBundle?.localizedString(forKey: self,
+                                               value: "**\(self)**",
+            table: nil) ?? "**\(self)**"
 
     }
 }
@@ -18,5 +24,4 @@ extension String {
 public enum Localization {
     public static let title = "title".localized()
     public static let description = "description".localized()
-    public static let details = "details".localized()
 }
