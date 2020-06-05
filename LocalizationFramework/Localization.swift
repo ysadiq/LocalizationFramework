@@ -7,7 +7,7 @@
 //
 
 extension String {
-    func localized(withComment comment: String = "") -> String {
+    public func localized(withComment comment: String = "") -> String {
         let notFound = "**\(self)**"
         var result = notFound
 
