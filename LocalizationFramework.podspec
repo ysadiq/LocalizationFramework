@@ -6,7 +6,6 @@ Pod::Spec.new do |spec|
                     LocalizationFramework is a small educational framework!
                    DESC
   spec.homepage     = "http://EXAMPLE/LocalizationFramework"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "YOUR_NAME" => "YOUR_EMAIL" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :http => 'file:' + __dir__ + "/" }
