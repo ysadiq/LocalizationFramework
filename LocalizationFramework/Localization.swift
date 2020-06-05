@@ -8,9 +8,20 @@
 
 extension String {
     func localized(withComment comment: String = "") -> String {
-        return Bundle.localizationFramework.localizedString(forKey: self,
-                                                            value: "**\(self)**",
-                                                            table: nil)
+        let notFound = "**\(self)**"
+        var result = notFound
+
+        result = Bundle.main.localizedString(forKey: self,
+                                             value: notFound,
+                                             table: nil)
+
+        if result == notFound {
+            result = Bundle.localizationFramework.localizedString(forKey: self,
+                                                                  value: notFound,
+                                                                  table: nil)
+        }
+
+        return result
     }
 }
 
